@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-map xmlns="http://cayenne.apache.org/schema/9/modelMap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cayenne.apache.org/schema/9/modelMap http://cayenne.apache.org/schema/9/modelMap.xsd" project-version="9">
+	<property name="defaultPackage" value="com.tc.app.exchangemonitor.model.cayenne.persistent"/>
+	<property name="defaultSchema" value="dbo"/>
+	<property name="defaultCatalog" value="DEV_31_trade"/>
+	
+	<db-entity name="constants">
+		<db-attribute name="attribute_name" type="VARCHAR" isPrimaryKey="true" isMandatory="true" length="50"/>
+		<db-attribute name="attribute_note" type="CLOB" length="2147483647"/>
+		<db-attribute name="attribute_status" type="CHAR" isMandatory="true" length="1"/>
+		<db-attribute name="attribute_value" type="VARCHAR" isMandatory="true" length="255"/>
+		<db-attribute name="client_edit_ind" type="CHAR" length="1"/>
+	</db-entity>
+	
+	<obj-entity name="Constants" className="com.kumar.learingbootique.model.cayenne.persistent.Constants" dbEntityName="constants">
+		<obj-attribute name="attributeNote" type="java.lang.String" db-attribute-path="attribute_note"/>
+		<obj-attribute name="attributeStatus" type="java.lang.String" db-attribute-path="attribute_status"/>
+		<obj-attribute name="attributeValue" type="java.lang.String" db-attribute-path="attribute_value"/>
+		<obj-attribute name="clientEditInd" type="java.lang.String" db-attribute-path="client_edit_ind"/>
+	</obj-entity>
+
+</data-map>
